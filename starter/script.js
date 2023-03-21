@@ -87,11 +87,17 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
+const btn = document.getElementById('generate');
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-prompt()
+  if(btn.onclick == true ){
+prompt("Please Type in Length of Password:");
+  }
 }
+
+getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
