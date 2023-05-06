@@ -87,22 +87,46 @@ var upperCasedCharacters = [
   'Y',
   'Z'
 ];
+
+//button Variable
 const btn = document.getElementById('generate');
+
+//Checking array length
+console.log(specialCharacters.length)// 23
+console.log(numericCharacters.length) // 10 
+console.log(lowerCasedCharacters.length) // 26
+console.log(upperCasedCharacters.length)// 26
 
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  if(btn.onclick == true ){
-prompt("Please Type in Length of Password:");
-  }
+const length = prompt("Please Type in Length of Password:");
+{console.log(length)}
+const special = prompt("Please Type in Amount of Special Characters:");
+{console.log(special)}
+const numeric = prompt("Please Type in Amount of numeric Characters:");
+{console.log(numeric)}
+const lower = prompt("Please Type in Amount of LowerCased Characters:");
+{console.log(lower)}
+const upper = prompt("Please Type in Amount of UpperCased Characters:");
+{console.log(upper)}
 }
-
-getPasswordOptions();
+// btn.onclick
+// prompt("Please Type in Length of Password:");
+// getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  for(var x = 0; x < arr.length ; x++){
+    console.log(Math.floor((Math.random()* arr.length)+ 1));
+    console.log(arr[x])
+  }
 }
+// console.log(Math.floor((Math.random()* arr.length)+ 1));
+getRandom(specialCharacters);
+getRandom(upperCasedCharacters);
+
+
 
 // Function to generate password with user input
 function generatePassword() {
